@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.link.namjin.board.mapper.BoardMapper">
+    <select id="getBoardList" resultType="com.link.namjin.board.vo.BoardVO">
+        SELECT * FROM BOARD
+    </select>
+
+    <insert id="insertContent">
+        INSERT INTO BOARD(TITLE, CONTENT, WRITER)
+        VALUES(#{title}, #{content}, #{writer})
+    </insert>
+</mapper>
